@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habit_note/DesignSystem/Components/BottomNavigationBar/bottom_nav_bar_view_model.dart';
+import 'package:habit_note/DesignSystem/Shared/colors.dart';
 
 class BottomNavBar extends StatelessWidget {
   final BottomNavBarViewModel viewModel;
@@ -19,6 +20,12 @@ class BottomNavBar extends StatelessWidget {
       showSelectedLabels: true,
       currentIndex: currentIndex,
       onTap: viewModel.onIndexChanged,
+      selectedItemColor: textColor,
+      unselectedItemColor: textColor,
+      backgroundColor: backgroundColor,
+      iconSize: 36,
+      selectedFontSize: 18,
+      unselectedFontSize: 18,
     );
   }
 }
