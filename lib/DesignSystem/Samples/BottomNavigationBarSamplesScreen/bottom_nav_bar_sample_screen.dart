@@ -23,7 +23,7 @@ class _BottomNavBarSampleScreenState extends State<BottomNavBarSampleScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bottom Tab Bar Page'),
+        title: const Text('Bottom Nav Bar Sample Screen'),
       ),
       body: pages[actualIndex],
       bottomNavigationBar: BottomNavBar.instantiate(
