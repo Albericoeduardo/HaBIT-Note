@@ -82,7 +82,7 @@ class InputFieldSampleScreen extends StatelessWidget {
                 isPassword: true,
                 isEnabled: true,
                 validator: (value) {
-                  if (passwordController.value != confirmPasswordController.value) {
+                  if (passwordController.value.text != confirmPasswordController.value.text) {
                     return 'Password does not match';
                   }
                   return null;
