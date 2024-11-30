@@ -24,13 +24,13 @@ class LinkedLabel extends StatelessWidget {
       children: [
         Text(
           viewModel.fullText.substring(0, startIndex),
-          style: const TextStyle(color: textColor),
+          style: const TextStyle(color: textColor, fontSize: 18),
         ),
         GestureDetector(
           onTap: viewModel.onLinkTap,
           child: Text(
             viewModel.linkedText,
-            style: const TextStyle(color: primaryBrandColor),
+            style: const TextStyle(color: primaryBrandColor, fontSize: 18),
           ),
         )
       ],
