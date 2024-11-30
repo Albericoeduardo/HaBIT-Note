@@ -15,5 +15,4 @@ class _LoginPageState extends State<LoginPage> {
         title: const Text("Login page"),
       ),
     );
-  }
 }
