@@ -166,7 +166,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 label: "CREATE ACCOUNT",
                 style: RoundedButtonStyle.primary,
                 onPressed: () {
-                  RegistrationPageRouter.goToHomePage(context, usernameController.text, emailController.text, passwordController.text);
+                  RegistrationPageRouter.goToHomePage(context, emailController.text, passwordController.text);
                 },
               )
             ),
