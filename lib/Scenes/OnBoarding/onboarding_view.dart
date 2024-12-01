@@ -127,7 +127,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               viewModel: RoundedButtonViewModel(
                 label: "CREATE ACCOUNT",
                 style: RoundedButtonStyle.primary,
-                onPressed: () {},
+                onPressed: () {
+                  OnBoardingPageRouter.goToRegistrationPage(context);
+                },
               )
             ),
             const SizedBox(height: 25,),
