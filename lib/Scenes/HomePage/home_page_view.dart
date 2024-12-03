@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:habit_note/DesignSystem/Components/ActionItem/action_item.dart';
+import 'package:habit_note/DesignSystem/Components/ActionItem/action_item_view_model.dart';
 import 'package:habit_note/DesignSystem/Components/BottomNavigationBar/bottom_nav_bar.dart';
 import 'package:habit_note/DesignSystem/Components/BottomNavigationBar/bottom_nav_bar_view_model.dart';
 import 'package:habit_note/DesignSystem/Shared/colors.dart';
@@ -134,6 +136,56 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: isGridView ? buildGridView() : buildListView(),
+      floatingActionButton: SizedBox(
+        width: 70,
+        height: 70,
+        child: FloatingActionButton(
+          shape: const CircleBorder(),
+          backgroundColor: primaryBrandColor,
+          child: const Icon(Icons.add, color: Colors.white, size: 40,),
+          onPressed: () {
+            showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return (
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 44),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Text(
+                          'New',
+                          style: TextStyle(
+                            color: textColor,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold
+                          ),
+                        ),
+                        const SizedBox(height: 16,),
+                        ActionItem.instantiate(
+                          viewModel: ActionItemViewModel(
+                            onTap: () {},
+                            label: "Add note",
+                            icon: Icons.keyboard
+                          )
+                        ),
+                        const SizedBox(height: 16,),
+                        ActionItem.instantiate(
+                          viewModel: ActionItemViewModel(
+                            onTap: () {},
+                            label: "Add to-do",
+                            icon: Icons.check_box
+                          )
+                        ),
+                      ],
+                    ),
+                  )
+                );
+              }
+            );
+          },
+        ),
+      ),
       bottomNavigationBar: BottomNavBar.instantiate(
         viewModel: BottomNavBarViewModel(
           bottomTabs: [
