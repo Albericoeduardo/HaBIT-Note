@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
     {
       'title': 'UI concepts worth exsisting',
       'description': 'Description for Note 1',
-      'color': Colors.red,
+      'color': const Color.fromARGB(255, 253, 153, 255),
       'date': DateTime.now(),
       'type': 'note',
     },
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
     {
       'title': 'Animes produced by Wit Studio',
       'description': 'Description for Note 3',
-      'color': Colors.green,
+      'color': const Color.fromARGB(255, 144, 244, 143),
       'date': DateTime.now().subtract(const Duration(days: 2)),
       'type': 'note',
     },
@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
           'completed': false
         }
       ],
-      'color': Colors.red,
+      'color': const Color.fromARGB(255, 253, 153, 255),
       'date': DateTime.now(),
       'type': 'todo',
     },
@@ -86,14 +86,14 @@ class _HomePageState extends State<HomePage> {
           'completed': false
         }
       ],
-      'color': Colors.green,
+      'color': const Color.fromARGB(255, 144, 244, 143),
       'date': DateTime.now().subtract(const Duration(days: 2)),
       'type': 'todo',
     },
     {
       'title': 'Animes produced by Wit Studio',
       'description': 'Description for Note 3',
-      'color': Colors.green,
+      'color': const Color.fromARGB(255, 144, 244, 143),
       'date': DateTime.now().subtract(const Duration(days: 2)),
       'type': 'note',
     },
@@ -395,14 +395,14 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          filterNotesByColor(Colors.red);
+                          filterNotesByColor(const Color.fromARGB(255, 253, 153, 255));
                           Navigator.of(context).pop();
                         },
                         child: Container(
                           width: 100,
                           height: 40,
                           decoration: BoxDecoration(
-                            color: Colors.red,
+                            color: const Color.fromARGB(255, 253, 153, 255),
                             borderRadius: BorderRadius.circular(24),
                           ),
                         ),
@@ -423,14 +423,14 @@ class _HomePageState extends State<HomePage> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          filterNotesByColor(Colors.green);
+                          filterNotesByColor(const Color.fromARGB(255, 144, 244, 143));
                           Navigator.of(context).pop();
                         },
                         child: Container(
                           width: 100,
                           height: 40,
                           decoration: BoxDecoration(
-                            color: Colors.green,
+                            color: const Color.fromARGB(255, 144, 244, 143),
                             borderRadius: BorderRadius.circular(24),
                           ),
                         ),
