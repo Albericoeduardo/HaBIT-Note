@@ -46,16 +46,16 @@ class _InputFieldState extends State<InputField> {
       prefixIconColor: primaryBrandColor,
       suffixIcon: widget.viewModel.isPassword
         ? IconButton(
-          icon: Icon(obscureText ? Icons.visibility_off : Icons.visibility, color: inputFieldColor,),
+          icon: Icon(obscureText ? Icons.visibility_off : Icons.visibility, color: inputTextColor,),
           onPressed: togglePasswordVisibility,
         ) : 
         widget.viewModel.suffixIcon,
       fillColor: widget.viewModel.isEnabled ? Colors.white : Colors.grey.shade400,
       hintText: widget.viewModel.placeholder.isNotEmpty ? widget.viewModel.placeholder : null,
-      hintStyle: const TextStyle(color: inputFieldColor),
+      hintStyle: const TextStyle(color: inputTextColor),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(4),
-        borderSide: const BorderSide(color: inputFieldColor),
+        borderSide: const BorderSide(color: inputTextColor),
       ),
       errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(4),
@@ -63,11 +63,11 @@ class _InputFieldState extends State<InputField> {
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(4),
-        borderSide: const BorderSide(color: inputFieldColor),
+        borderSide: const BorderSide(color: inputTextColor),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(4),
-        borderSide: const BorderSide(color: inputFieldColor),
+        borderSide: const BorderSide(color: inputTextColor),
       ),
       disabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(4),
